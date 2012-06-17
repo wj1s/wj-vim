@@ -21,6 +21,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
 
 " vim-scripts repos
 "Bundle 'L9'
