@@ -20,6 +20,8 @@ Bundle 'gmarik/vundle'
 "Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
+
 " vim-scripts repos
 "Bundle 'L9'
 "http://www.tudou.com/programs/view/dWaS_Jw98t8/
