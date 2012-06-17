@@ -18,6 +18,7 @@ Bundle 'gmarik/vundle'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'tpope/vim-markdown'
 "Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-powerline'
 
 " vim-scripts repos
 "Bundle 'L9'
