@@ -1,3 +1,49 @@
+
+"""""""""""""""""""""""""""""""""""""""""""
+"   ==> vundle
+"""""""""""""""""""""""""""""""""""""""""""
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+" original repos on github
+"http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/
+"Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'tpope/vim-markdown'
+"Bundle 'kien/ctrlp.vim'
+
+" vim-scripts repos
+"Bundle 'L9'
+"http://www.tudou.com/programs/view/dWaS_Jw98t8/
+"Bundle 'FuzzyFinder'
+"Bundle 'PProvost/vim-ps1'
+"http://net.tutsplus.com/tutorials/other/vim-essential-plugin-surround/
+"Bundle 'surround.vim'
+
+filetype plugin indent on     " required!
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""
+"   ==> General
+"""""""""""""""""""""""""""""""""""""""""""
+
 let mapleader = ","
 let g:mapleader = ","
 
@@ -6,7 +52,6 @@ nmap <leader>w :w!<cr>
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 
-set nocompatible                      " not compatible with the old-fashion vi mode
 set backspace=2                       " allow backspacing over everything in insert nc >kkmode
 set history=1000                      " keep 1000 lines of command line history
 set undolevels=100
