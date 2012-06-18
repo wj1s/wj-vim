@@ -20,10 +20,12 @@ Bundle 'gmarik/vundle'
 "Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-fugitive'
 
 " vim-scripts repos
 "Bundle 'L9'

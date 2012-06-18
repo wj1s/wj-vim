@@ -1,4 +1,4 @@
-nnoremap <silent> <F2> :NERDTreeToggle<CR>
+nnoremap <silent> <F2> :NERDTreeMirrorToggle<CR>
 let NERDTreeShowBookmarks=0
 let NERDTreeChDirMode=2
 let NERDTreeMouseMode=2
@@ -16,4 +16,4 @@ let g:NERDTreeWinSize=30
 "autocmd vimenter * if !argc() | NERDTree | endif
 
 "close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
