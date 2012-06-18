@@ -22,6 +22,8 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'ervandew/supertab'
 
 " vim-scripts repos
 "Bundle 'L9'
