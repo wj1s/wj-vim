@@ -28,6 +28,7 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 
 " vim-scripts repos
+Bundle 'calendar.vim--Matsumoto'
 "Bundle 'L9'
 "http://www.tudou.com/programs/view/dWaS_Jw98t8/
 "Bundle 'FuzzyFinder'
