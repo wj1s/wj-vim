@@ -26,9 +26,13 @@ Bundle 'mileszs/ack.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-surround'
 
 " vim-scripts repos
 Bundle 'calendar.vim--Matsumoto'
+Bundle 'taglist.vim'
+Bundle 'matchit.zip'
 "Bundle 'L9'
 "http://www.tudou.com/programs/view/dWaS_Jw98t8/
 "Bundle 'FuzzyFinder'
