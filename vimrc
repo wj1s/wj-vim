@@ -28,6 +28,9 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'sunaku/vim-ruby-minitest'
 
 " vim-scripts repos
 Bundle 'calendar.vim--Matsumoto'
