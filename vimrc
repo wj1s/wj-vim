@@ -21,7 +21,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'kien/ctrlp.vim'
+"Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
@@ -36,9 +36,9 @@ Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'calendar.vim--Matsumoto'
 Bundle 'taglist.vim'
 Bundle 'matchit.zip'
-"Bundle 'L9'
+Bundle 'L9'
 "http://www.tudou.com/programs/view/dWaS_Jw98t8/
-"Bundle 'FuzzyFinder'
+Bundle 'FuzzyFinder'
 "Bundle 'PProvost/vim-ps1'
 "http://net.tutsplus.com/tutorials/other/vim-essential-plugin-surround/
 "Bundle 'surround.vim'
@@ -162,7 +162,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " comment
 map <Leader><Leader> <Leader>c<space>
-
+map <Leader>f :FufCoverageFile!<cr>
+let g:fuf_enumeratingLimit = 5000
+let g:fuf_coveragefile_prompt = '=>'
 " next and prev tab
 noremap <F7> gT
 noremap <F8> gt
@@ -185,3 +187,7 @@ noremap <CR> :nohlsearch<CR>
 
 " select ALL
 map <C-A> ggVG
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
