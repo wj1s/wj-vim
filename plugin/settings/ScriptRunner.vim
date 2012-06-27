@@ -36,6 +36,7 @@ endif
 " Ruby
 if executable("ruby")
   autocmd BufRead,BufNewFile *.rb map <F5> :% w !ruby -w<CR>
+  autocmd BufRead,BufNewFile *.rb map <leader>q :% w !rspec extract_method_spec.rb -I .<CR>
 else
   autocmd BufRead,BufNewFile *.rb map <F5> :echo "you need to install Ruby first!"<CR>
 endif

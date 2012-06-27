@@ -15,7 +15,8 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 " original repos on github
 "http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/
-"Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'YankRing.vim'
 "Bundle 'tpope/vim-markdown'
 "Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
@@ -31,6 +32,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'sunaku/vim-ruby-minitest'
+Bundle 'c9s/colorselector.vim'
+Bundle 'michaeljsmith/vim-indent-object'
 
 " vim-scripts repos
 Bundle 'calendar.vim--Matsumoto'
