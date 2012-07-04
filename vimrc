@@ -11,7 +11,7 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
-
+Bundle 'drmingdrmer/xptemplate'
 " My Bundles here:
 " original repos on github
 "http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/
@@ -22,9 +22,10 @@ Bundle 'YankRing.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'DataWraith/auto_mkdir'
 "Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
-Bundle 'msanders/snipmate.vim'
+"Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
