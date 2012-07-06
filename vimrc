@@ -11,7 +11,8 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
-Bundle 'drmingdrmer/xptemplate'
+" Bundle 'drmingdrmer/xptemplate'
+Bundle 'godlygeek/tabular'
 " My Bundles here:
 " original repos on github
 "http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/
@@ -25,7 +26,8 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'DataWraith/auto_mkdir'
 "Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
-"Bundle 'msanders/snipmate.vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'mattn/zencoding-vim'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
@@ -41,6 +43,7 @@ Bundle 'calendar.vim--Matsumoto'
 Bundle 'taglist.vim'
 Bundle 'matchit.zip'
 Bundle 'L9'
+Bundle 'DirDiff.vim'
 "http://www.tudou.com/programs/view/dWaS_Jw98t8/
 Bundle 'FuzzyFinder'
 "Bundle 'PProvost/vim-ps1'
