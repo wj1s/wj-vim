@@ -1,4 +1,3 @@
-
 """""""""""""""""""""""""""""""""""""""""""
 "   ==> vundle
 """""""""""""""""""""""""""""""""""""""""""
@@ -11,44 +10,58 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
-" Bundle 'drmingdrmer/xptemplate'
+
+"--------------------------
+" utility
+"--------------------------
 Bundle 'godlygeek/tabular'
-" My Bundles here:
-" original repos on github
-"http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'YankRing.vim'
-"Bundle 'tpope/vim-markdown'
-"Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/nerdtree'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'DataWraith/auto_mkdir'
-"Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'msanders/snipmate.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'calendar.vim--Matsumoto'
+Bundle 'matchit.zip'
+"Bundle 'DirDiff.vim'
+
+"--------------------------
+" tool for explorer
+"--------------------------
+Bundle 'DataWraith/auto_mkdir'
+Bundle 'mileszs/ack.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'taglist.vim'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+
+"--------------------------
+" color scheme
+"--------------------------
+Bundle 'c9s/colorselector.vim'
+Bundle 'endel/vim-github-colorscheme'
+Bundle 'rickharris/vim-blackboard'
+Bundle 'Lokaltog/vim-powerline'
+
+"--------------------------
+" ruby
+"--------------------------
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'sunaku/vim-ruby-minitest'
-Bundle 'c9s/colorselector.vim'
-Bundle 'michaeljsmith/vim-indent-object'
 
-" vim-scripts repos
-Bundle 'calendar.vim--Matsumoto'
-Bundle 'taglist.vim'
-Bundle 'matchit.zip'
-Bundle 'L9'
-Bundle 'DirDiff.vim'
-"http://www.tudou.com/programs/view/dWaS_Jw98t8/
-Bundle 'FuzzyFinder'
-"Bundle 'PProvost/vim-ps1'
-"http://net.tutsplus.com/tutorials/other/vim-essential-plugin-surround/
-"Bundle 'surround.vim'
+"--------------------------
+" markdown
+"--------------------------
+Bundle 'tpope/vim-markdown'
+
+"--------------------------
+" snipmate
+"--------------------------
+Bundle 'msanders/snipmate.vim'
 
 filetype plugin indent on     " required!
 "
@@ -91,6 +104,7 @@ set number
 set numberwidth=4
 set title
 set showmode
+set showmatch
 set nobomb                            " no BOM(Byte Order Mark)
 set nostartofline
 set laststatus=2
@@ -106,6 +120,8 @@ set key=			                        " disable encryption
 set synmaxcol=2048
 set viminfo=			                    " disable .viminfo file
 set ttyfast                           " send more chars while redrawing
+set guioptions-=R
+set whichwrap+=<,>,h,l
 
 filetype on                           " enable filetype detection
 filetype indent on                    " enable filetype-specific indenting
@@ -169,12 +185,56 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " comment
 map <Leader><Leader> <Leader>c<space>
+
+" FuzzyFinder
 map <Leader>f :FufCoverageFile!<cr>
 let g:fuf_enumeratingLimit = 5000
 let g:fuf_coveragefile_prompt = '=>'
-" next and prev tab
-noremap <F7> gT
-noremap <F8> gt
+
+" F4 toggle for paste, Insert Mode
+set pastetoggle=<F4>
+" toggle for copy & paste, Normal Mode
+nnoremap <silent> <F4> :set nu!<CR>:set list!<CR>
+
+" toggle mouse with F12, for selection be copied to system clipboard
+set mouse=a
+" set windows only
+nnoremap <silent> <F11> :on<cr>
+
+"-------------------------------
+" Windows switch with Ctrl+↑↓←→
+"-------------------------------
+" 窗口区域切换,Ctrl+jkhl 来切换
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+" 窗口区域切换,Ctrl+↑↓←→  来切换
+imap <silent> <C-left> <esc><C-W><left>
+vmap <silent> <C-left> <esc><C-W><left>
+nmap <silent> <C-left> <C-W><left>
+imap <silent> <C-right> <esc><C-W><right>
+vmap <silent> <C-right> <esc><C-W><right>
+nmap <silent> <C-right> <C-W><right>
+imap <silent> <C-up> <esc><C-W><up>
+vmap <silent> <C-up> <esc><C-W><up>
+nmap <silent> <C-up> <C-W><up>
+imap <silent> <C-down> <esc><C-W><down>
+vmap <silent> <C-down> <esc><C-W><down>
+nmap <silent> <C-down> <C-W><down>
+"----------------------------
+" Tab navigation
+"----------------------------
+noremap <silent> tf :tabfirst<cr>
+noremap <silent> tl :tablast<cr>
+noremap <silent> tp :tabprevious<cr>
+noremap <silent> tn :tabnext<cr>
+noremap te :tabedit<space>
+noremap tm :tabmove<space>
+
+" search & replace current word under cursor
+nnoremap <leader>c /<c-r><c-w><cr>N:%s/<c-r><c-w>//gc<left><left><left>
+vnoremap <leader>c "sy/<c-r>=substitute(@s,'\n','\\n','g')<cr>/<cr>N:%s/<c-r>=substitute(@s,'\n','\\n','g')<cr>//gc<left><left><left>
 
 " identation
 nmap <TAB> v>
@@ -198,3 +258,31 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+
+inoremap <leader>1 ()<esc>:let leavechar=")"<cr>i
+inoremap <leader>2 []<esc>:let leavechar="]"<cr>i
+inoremap <leader>3 {}<esc>:let leavechar="}"<cr>i
+inoremap <leader>4 {<esc>o}<esc>:let leavechar="}"<cr>O
+inoremap <leader>q ''<esc>:let leavechar="'"<cr>i
+inoremap <leader>w ""<esc>:let leavechar='"'<cr>i
+
+nmap <space> :
+
+
+" strip all trailing whitespace in the current file
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" " reselect the text that was just pasted
+nnoremap <leader>V V`]
+" " 水平分割窗口
+nnoremap <leader>s <C-w>s
+" " 垂直分割窗口
+nnoremap <leader>v <C-w>v
+" " ack
+nnoremap <leader>a :Ack
+" " Display the contents of the yankring
+nnoremap <leader>y :YRShow<CR>
+" " highlight cursor column
+nnoremap <leader>lc :set cursorcolumn!<CR>
+" " highlight cursor line
+nnoremap <leader>ll :set cursorline!<CR>
