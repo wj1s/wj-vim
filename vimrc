@@ -54,6 +54,11 @@ Bundle 'tpope/vim-rails'
 Bundle 'sunaku/vim-ruby-minitest'
 
 "--------------------------
+" powershell
+"--------------------------
+Bundle 'PProvost/vim-ps1'
+"
+"--------------------------
 " markdown
 "--------------------------
 Bundle 'tpope/vim-markdown'
@@ -84,6 +89,7 @@ let mapleader = ","
 let g:mapleader = ","
 
 map <silent> <leader>e :tabe ~/.vimrc<cr>
+:map <silent> <leader>z :vsp ~/github-working-copy/wj-vim/bundle/snipmate.vim/snippets/ruby.snippets<cr>
 nmap <leader>w :w!<cr>
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
@@ -265,9 +271,6 @@ inoremap <leader>3 {}<esc>:let leavechar="}"<cr>i
 inoremap <leader>4 {<esc>o}<esc>:let leavechar="}"<cr>O
 inoremap <leader>q ''<esc>:let leavechar="'"<cr>i
 inoremap <leader>w ""<esc>:let leavechar='"'<cr>i
-
-nmap <space> :
-
 
 " strip all trailing whitespace in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
