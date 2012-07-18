@@ -89,7 +89,9 @@ let mapleader = ","
 let g:mapleader = ","
 
 map <silent> <leader>e :tabe ~/.vimrc<cr>
-:map <silent> <leader>z :vsp ~/github-working-copy/wj-vim/bundle/snipmate.vim/snippets/ruby.snippets<cr>
+map <silent> <leader>E :tabe ~/.gvimrc<cr>
+map <silent> <leader>Z :vsp ~/.vim/bundle/snipmate.vim/snippets/
+map <silent> <leader>z :vsp ~/.vim/snippets/
 nmap <leader>w :w!<cr>
 autocmd! bufwritepost .vimrc source ~/.vimrc
 

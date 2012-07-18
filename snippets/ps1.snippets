@@ -1,4 +1,51 @@
+snippet curr
+	$curDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+	${1}
+
 snippet fun
-	Function (${1:e}) {
-		${2:// callback}
-	};
+	Function ${1:Function_name} ($${2:argument}) {
+		${3:// body...}
+	}
+
+snippet $
+	$${1}
+
+snippet $=
+	$${1:key} = "${2:value}"
+	${3}
+
+snippet $s
+	$script:${1}
+
+snippet $s=
+	$script:${1:key} = "${2:value}"
+	${3}
+
+snippet $g
+	$Global:${1}
+
+snippet $g=
+	$Global:${1:key} = "${2:value}"
+	${3}
+
+snippet $l
+	$local:${1}
+
+snippet $l=
+	$local:${1:key} = "${2:value}"
+	${3}
+
+snippet $p
+	$private:${1}
+
+snippet $p=
+	$private:${1:key} = "${2:value}"
+	${3}
+
+snippet for
+	$${1:obj} | % {
+		${2:$_}
+	}
+
+snippet wh
+	Write-host ${1}
