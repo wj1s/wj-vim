@@ -51,7 +51,8 @@ Bundle 'Lokaltog/vim-powerline'
 "--------------------------
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
-Bundle 'sunaku/vim-ruby-minitest'
+Bundle 'rson/vim-conque'
+Bundle 'skwp/vim-ruby-conque'
 
 "--------------------------
 " powershell
@@ -291,3 +292,21 @@ nnoremap <leader>y :YRShow<CR>
 nnoremap <leader>lc :set cursorcolumn!<CR>
 " " highlight cursor line
 nnoremap <leader>ll :set cursorline!<CR>
+"模拟 Emacs 键绑定
+" Move
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+"inoremap <C-p> <Up>
+"inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <M-b> <C-o>b
+inoremap <M-f> <C-o>w
+" Rubout word / line and enter insert mode
+" use <Esc><Right> instead of <C-o>
+inoremap <C-w> <Esc>dbcl
+" delete
+inoremap <C-u> <Esc>d0cl
+inoremap <C-k> <Esc><Right>C
+inoremap <C-d> <Esc><Right>s
+inoremap <M-d> <C-o>de
