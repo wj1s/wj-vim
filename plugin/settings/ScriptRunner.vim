@@ -35,7 +35,7 @@ endif
 
 " Ruby
 if executable("ruby")
-  autocmd BufRead,BufNewFile *.rb map <F5> :% w !/Users/twer/.rvm/bin/ruby-1.9.3-p125 -w<CR>
+  autocmd BufRead,BufNewFile *.rb map <F5> :% w !/usr/local/Cellar/ruby/1.9.3-p194 -w<CR>
   autocmd BufRead,BufNewFile *.rb map <leader>q :% w !rspec % -I .<CR>
 else
   autocmd BufRead,BufNewFile *.rb map <F5> :echo "you need to install Ruby first!"<CR>
